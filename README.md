@@ -1,5 +1,6 @@
-Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!
 
-Learn more at https://developers.google.com/idx/guides/customize-idx-
+10,000 copies of h animation, webtoon-only, web file(.webp .avif), mp4 high-capacity, high-speed gallery
 
-12
+.webp .avif viewer
+
+https://19f2b3a8.hgall.pages.dev/vc.htm
