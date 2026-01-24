@@ -3,4 +3,4 @@
 
 image files and .webp .avif .mp4 viewer
 
-https://19f2b3a8.hgall.pages.dev/vc.htm
+https://hgall.pages.dev
