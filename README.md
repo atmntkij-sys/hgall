@@ -16,6 +16,6 @@ In the thumbnail pop-up window, click the "Download Thumbnail" button to downloa
 
 <div align="center">
 
-**[⬇️ index.html 다운로드 받기](https://raw.githubusercontent.com/atmntkij-sys/hgall/main/index.html)**
+**[⬇️ index.html 다운로드 받기](https://github.com/atmntkij-sys/hgall/blob/main/index.html)**
 
 </div>
