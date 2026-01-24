@@ -5,6 +5,7 @@
     *
     * 소유권(Ownership): smweb.kr
     * 제작자(Creator): 김인재 (injae kim)
+    * atmntkij@gmail.com
     *
     * [ 이용 약관 및 법적 고지 ]
     * 본 소스 코드와 프로그램 디자인, 로직은 smweb.kr의 지적 재산입니다.
@@ -638,42 +639,37 @@
             text-align: center;
             line-height: 1.6;
         }
+
+        
+        /* [추가] 광고 섹션 스타일 */
+        .ad-section {
+            width: 100%;
+            max-width: 1400px; /* 리스트 너비와 동일하게 맞춤 */
+            margin: 0 auto 40px auto; /* 아래쪽 여백 40px */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03); /* 배경과 구분되는 은은한 색상 */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            min-height: 120px; /* 광고 로딩 전 레이아웃 밀림 방지 */
+        }
+
+        .ad-label {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 11px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+               
     </style>
 
-
-
-
-
-    
-    <!-- [추가] 구글 애드센스 스크립트 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    <!-- [추가] 구글 애드센스 스크립트 -->    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7551517924895708"
      crossorigin="anonymous"></script>
 
-    <style>
-        /* [추가] 광고 영역 스타일 */
-        .ad-container {
-            width: 100%;
-            text-align: center;
-            padding: 20px 0;
-            margin: 10px auto;
-            background: rgba(255, 255, 255, 0.05); /* 배경과 어울리게 약간의 투명도 */
-            border-radius: 8px;
-        }
-    </style>  
-    
-
-
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WKWR9FE6CV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WKWR9FE6CV');
-</script>
 
 <body>
     <div class="gallery-container">
@@ -683,6 +679,29 @@
                 <div class="drop-instruction">여기에 드래그하세요</div>
             </div>
             <div class="history-area">
+
+
+
+
+                <!-- [추가] 상단 광고 섹션 -->
+                <div class="ad-section">
+                    <div class="ad-label">Advertisement</div>
+                    <!-- 구글 애드센스 디스플레이 광고 코드 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" 
+                         data-ad-slot="1234567890"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- // 광고 섹션 끝 -->
+
+
+
+
                 <div class="history-title">📚 최근 본 폴더</div>
                 <div class="history-list" id="historyList">
                     <div class="no-history">아직 본 폴더가 없습니다.<br>좌측에 폴더를 드래그해주세요.</div>
