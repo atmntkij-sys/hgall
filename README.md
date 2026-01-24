@@ -13,3 +13,9 @@ https://hgall.pages.dev
 썸네일 팝업창에서 '썸네일 다운로드" 버튼을 클릭해 다운로드 받은다음 이미지들이 있는 같은 경로에 zip파일 압축을 풀어주세요. 초대용량 이미지들도 초고속으로 빠르게 찾아보실수 있습니다.
 
 In the thumbnail pop-up window, click the "Download Thumbnail" button to download it and decompress the zip file into the same path where the images are located. Super-capacity images are also available at superfast speeds.
+
+<div align="center">
+
+**[⬇️ index.html 다운로드 받기](https://github.com/atmntkij-sys/hgall.git/main/index.html)**
+
+</div>
