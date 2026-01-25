@@ -1,6 +1,7 @@
 
-git add.
-git commit -m "first commit"
+#git add.
+#git commit -m "first commit"
+
 git remote add https://github.com/atmntkij-sys/hgall.git
 
 git push -u https://github.com/atmntkij-sys/hgall.git main

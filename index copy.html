@@ -39,33 +39,21 @@
         body {
             font-family: Arial, sans-serif;
             background: #1a1a1a;
-            /* overflow: hidden;   ad-1 수정 전: overflow: hidden 때문에 봇이 텍스트를 못 볼 수 있음 */
-
+            overflow: hidden;
             height: 100vh;
         }
 
-        /* .gallery-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: #000;
-        } */
-
-        /* ad-1 갤러리 컨테이너 수정 */
         .gallery-container {
             position: relative;
             width: 100%;
-            min-height: 100vh; /* height 대신 min-height 사용 */
+            height: 100vh;
             display: flex;
             flex-direction: column;
             background: #000;
         }
-                 
 
         /* 드롭존 영역 */
-        /* .drop-zone {
+        .drop-zone {
             position: absolute;
             top: 0;
             left: 0;
@@ -75,16 +63,7 @@
             background: #000;
             z-index: 100;
             transition: all 0.3s ease;
-        } */
-
-        /* ad-1 드롭존이 화면을 꽉 채우지 않도록 조정 (텍스트가 보여야 함) */
-        .drop-zone {
-            /* position: absolute;  <-- 삭제 */
-            position: relative; /* 변경 */
-            height: 80vh; /* 100% 대신 80vh 정도로 줄여서 아래 텍스트가 살짝 보이게 유도 */
-            min-height: 600px;
-        }       
-
+        }
 
         .drop-zone.hidden {
             display: none;
@@ -683,34 +662,8 @@
             text-transform: uppercase;
         }
 
-
-    /* [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 스타일 */
-    .content-section {
-        background: #1a1a1a;
-        color: #ccc;
-        padding: 60px 20px;
-        line-height: 1.6;
-        border-top: 1px solid #333;
-        position: relative;
-        z-index: 10; /* 드롭존보다 위에 보이거나 스크롤 가능하게 */
-        overflow-y: auto;
-    }
-    .content-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .content-section h2 { color: #fff; margin-bottom: 20px; font-size: 24px; border-bottom: 2px solid #4CAF50; display: inline-block; padding-bottom: 10px; }
-    .content-section h3 { color: #fff; margin-top: 30px; margin-bottom: 15px; font-size: 18px; }
-    .content-section p { margin-bottom: 15px; font-size: 15px; }
-    .content-section ul { margin-bottom: 20px; padding-left: 20px; }
-    .content-section li { margin-bottom: 10px; }
-    .footer-links { margin-top: 50px; padding-top: 20px; border-top: 1px solid #444; font-size: 13px; text-align: center; }
-    .footer-links a { color: #888; text-decoration: none; margin: 0 10px; }
-        
-
                
     </style>
-
 
     <!-- [추가] 구글 애드센스 스크립트 -->    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7551517924895708"
@@ -720,63 +673,11 @@
 
 <body>
     <div class="gallery-container">
-
-        <!-- [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 -->
-        <div class="content-section">
-            <div class="content-container">
-                <!-- 1. 사이트 소개 (검색엔진이 읽을거리) -->
-                <h2>웹 이미지 뷰어 & 갤러리 관리 도구</h2>
-                <p>
-                    hgall은 별도의 프로그램 설치 없이 웹브라우저에서 대용량 이미지 폴더를 빠르게 열람하고 관리할 수 있는 
-                    무료 웹 이미지 뷰어입니다. 사용자의 PC에 있는 이미지를 서버로 전송하지 않고, 
-                    브라우저 내에서 로컬 처리하므로 개인정보 유출 걱정 없이 안전하게 사용할 수 있습니다.
-                </p>
-
-                <!-- 2. 주요 기능 (텍스트 양 늘리기) -->
-                <h3>주요 기능</h3>
-                <ul>
-                    <li><strong>강력한 보안:</strong> 모든 파일은 사용자 컴퓨터(로컬)에서만 처리되며 서버에 업로드되지 않습니다.</li>
-                    <li><strong>폴더 구조 유지:</strong> 드래그 앤 드롭으로 폴더째 업로드하여 이미지를 연속으로 감상할 수 있습니다.</li>
-                    <li><strong>편리한 기능:</strong> 자동 재생(슬라이드쇼), 전체 화면 모드, 썸네일 그리드 뷰를 지원합니다.</li>
-                    <li><strong>최근 경로 기억:</strong> 크롬 브라우저 사용 시, 마지막으로 열었던 폴더 경로를 기억하여 빠르게 다시 열 수 있습니다.</li>
-                    <li><strong>썸네일 다운로드:</strong> 대량의 이미지 썸네일을 생성하여 ZIP 파일로 한 번에 다운로드할 수 있습니다.</li>
-                </ul>
-
-                <!-- 3. 사용 방법 (콘텐츠 가치 증명) -->
-                <h3>사용 방법</h3>
-                <p>
-                    1. PC에 저장된 이미지 폴더를 화면 중앙의 드롭 영역으로 드래그 앤 드롭하세요.<br>
-                    2. 또는 '폴더 열기' 버튼을 클릭하여 이미지가 포함된 폴더를 선택합니다.<br>
-                    3. 화살표 키(←, →)를 사용하여 이미지를 탐색하거나 스페이스바를 눌러 자동 재생을 시작하세요.
-                </p>
-
-                <!-- 4. 자주 묻는 질문 (FAQ) -->
-                <h3>자주 묻는 질문 (FAQ)</h3>
-                <p><strong>Q. 이미지가 서버에 저장되나요?</strong><br>
-                A. 아니요. hgall은 100% 클라이언트 사이드에서 작동합니다. 귀하의 사진은 인터넷을 통해 전송되지 않습니다.</p>
-                
-                <p><strong>Q. 지원하는 이미지 형식은 무엇인가요?</strong><br>
-                A. JPG, PNG, WEBP, GIF, AVIF, BMP 등 최신 웹 브라우저가 지원하는 모든 이미지 형식을 지원합니다.</p>
-
-                <!-- 5. 필수 정책 링크 (애드센스 필수 조건) -->
-                <div class="footer-links">
-                    <a href="privacy-policy.html">개인정보처리방침</a> | 
-                    <a href="terms.html">이용약관</a> | 
-                    <span>Copyright © 2026 smweb.kr All rights reserved.</span>
-                </div>
-            </div>
-        </div>
-        <!-- [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 -->
-
-
         <div class="drop-zone" id="dropZone">
-
             <div class="drop-area" id="dropArea">
-                <div class="drop-message"> <!--📁 폴더 드롭(Firefox Only)--> </div>
-                <div class="drop-instruction"> <!--여기에 드래그하세요--> </div>
+                <div class="drop-message">📁 폴더 드롭(Firefox Only)</div>
+                <div class="drop-instruction">여기에 드래그하세요</div>
             </div>
-
-            
             <div class="history-area">
 
 
@@ -1072,15 +973,6 @@
             dropZone.classList.add('hidden');
             prevBtn.style.display = 'flex'; nextBtn.style.display = 'flex'; controlsSection.style.display = 'flex'; controlTrigger.style.display = 'block';
             showImage(currentIndex);
-
-            
-            // ad-1 [추가] 이미지가 로드되면 설명 텍스트 숨기기 (몰입감 위해)
-            const contentSection = document.querySelector('.content-section');
-            if(contentSection) contentSection.style.display = 'none';
-            
-            // [추가] 이미지가 로드되면 body 스크롤 막기 (뷰어 모드)
-            document.body.style.overflow = 'hidden';
-
 
             setTimeout(() => { createThumbnails(); }, 100);
             setupControlsAutoHide();
