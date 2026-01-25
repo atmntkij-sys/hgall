@@ -18,6 +18,7 @@ In the thumbnail pop-up window, click the "Download Thumbnail" button to downloa
 
 If you use Chrome browser to install the "download thumbnail" file for the first time, it will be downloaded directly to the same folder!
 
+<br>
 <div align="center">
 
 **[⬇️ index.html 다운로드 받기](https://github.com/atmntkij-sys/hgall/blob/main/index.html)**
