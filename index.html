@@ -57,11 +57,13 @@
         .gallery-container {
             position: relative;
             width: 100%;
-            min-height: 100vh; /* height 대신 min-height 사용 */
+            min-height: 100vh; /* 높이를 고정이 아니라 내용물에 따라 늘어나게 변경 */
+            height: auto;
             display: flex;
             flex-direction: column;
             background: #000;
-        }
+            overflow-y: auto; /* 세로 스크롤 허용 */
+        }        
                  
 
         /* 드롭존 영역 */
@@ -78,17 +80,28 @@
         } */
 
         /* ad-1 드롭존이 화면을 꽉 채우지 않도록 조정 (텍스트가 보여야 함) */
+
+        /* 2. 드롭존(기능 영역): 화면의 대부분을 차지하고 클릭 가능하게 */
         .drop-zone {
-            /* position: absolute;  <-- 삭제 */
-            position: relative; /* 변경 */
-            height: 80vh; /* 100% 대신 80vh 정도로 줄여서 아래 텍스트가 살짝 보이게 유도 */
-            min-height: 600px;
-        }       
+            /* absolute를 relative로 변경하여 물리적인 공간을 차지하게 함 (핵심) */
+            position: relative; 
+            width: 100%;
+            /* 최소 높이를 화면의 90% 정도로 잡아서 기능 사용에 불편함 없게 함 */
+            min-height: 90vh; 
+            display: flex;
+            background: #000;
+            z-index: 5; /* 텍스트 섹션보다 낮거나 같게 */
+            transition: all 0.3s ease;
+        }
 
 
         .drop-zone.hidden {
             display: none;
         }
+
+
+
+        
 
         .drop-area {
             width: 20%;
@@ -685,16 +698,19 @@
 
 
     /* [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 스타일 */
+
+    /* 3. 설명 텍스트 영역: 맨 아래에 위치 */
     .content-section {
+        position: relative; /* relative로 설정하여 드롭존 아래에 자연스럽게 배치 */
+        width: 100%;
         background: #1a1a1a;
         color: #ccc;
         padding: 60px 20px;
         line-height: 1.6;
         border-top: 1px solid #333;
-        position: relative;
-        z-index: 10; /* 드롭존보다 위에 보이거나 스크롤 가능하게 */
-        overflow-y: auto;
-    }
+        z-index: 10;
+    }    
+
     .content-container {
         max-width: 800px;
         margin: 0 auto;
@@ -720,6 +736,53 @@
 
 <body>
     <div class="gallery-container">
+
+
+
+        <div class="drop-zone" id="dropZone">
+
+            <div class="drop-area" id="dropArea">
+                <div class="drop-message"> <!--📁 폴더 드롭(Firefox Only)--> </div>
+                <div class="drop-instruction"> <!--여기에 드래그하세요--> </div>
+            </div>
+
+            
+            <div class="history-area">
+
+
+                <!-- [추가] 상단 광고 섹션 -->
+                <div class="ad-section">
+                    <div class="ad-label">Advertisement</div>
+                    <!-- 구글 애드센스 디스플레이 광고 코드 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" 
+                         data-ad-slot="1234567890"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- // 광고 섹션 끝 -->
+
+
+
+
+                <div class="history-title">📚 최근 본 폴더</div>
+                <div class="history-list" id="historyList">
+                    <div class="no-history">아직 본 폴더가 없습니다.<br>좌측에 폴더를 드래그해주세요.</div>
+                </div>
+
+                <div class="history-upload">
+                    <button class="folder-upload-btn" id="unifiedUploadBtn">
+                        📂 폴더 열기 (최근 경로 기억. Chrome Only.)
+                    </button>
+                    <input type="file" id="fallbackFolderInput" webkitdirectory directory multiple hidden>
+                </div>
+            </div>
+        </div>
+
 
         <!-- [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 -->
         <div class="content-section">
@@ -769,51 +832,6 @@
         <!-- [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 -->
 
 
-        <div class="drop-zone" id="dropZone">
-
-            <div class="drop-area" id="dropArea">
-                <div class="drop-message"> <!--📁 폴더 드롭(Firefox Only)--> </div>
-                <div class="drop-instruction"> <!--여기에 드래그하세요--> </div>
-            </div>
-
-            
-            <div class="history-area">
-
-
-
-
-                <!-- [추가] 상단 광고 섹션 -->
-                <div class="ad-section">
-                    <div class="ad-label">Advertisement</div>
-                    <!-- 구글 애드센스 디스플레이 광고 코드 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" 
-                         data-ad-slot="1234567890"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <!-- // 광고 섹션 끝 -->
-
-
-
-
-                <div class="history-title">📚 최근 본 폴더</div>
-                <div class="history-list" id="historyList">
-                    <div class="no-history">아직 본 폴더가 없습니다.<br>좌측에 폴더를 드래그해주세요.</div>
-                </div>
-
-                <div class="history-upload">
-                    <button class="folder-upload-btn" id="unifiedUploadBtn">
-                        📂 폴더 열기 (최근 경로 기억. Chrome Only.)
-                    </button>
-                    <input type="file" id="fallbackFolderInput" webkitdirectory directory multiple hidden>
-                </div>
-            </div>
-        </div>
 
         <div class="main-viewer">
             <div id="imageWrapper"></div>
