@@ -784,6 +784,56 @@
         </div>
 
 
+
+
+
+
+        <div class="main-viewer">
+            <div id="imageWrapper"></div>
+            <button class="nav-button prev-button" id="prevBtn" style="display: none;">‹</button>
+            <button class="nav-button next-button" id="nextBtn" style="display: none;">›</button>
+        </div>
+
+        <div class="zoom-info" id="zoomInfo">100%</div>
+        <div class="control-trigger" id="controlTrigger" style="display: none;"></div>
+
+        <div class="controls-section" style="display: none;" id="controlsSection">
+            <div class="controls">
+                <button class="control-button" id="autoplayBtn">▶ 자동재생</button>
+                <div class="speed-control">
+                    <span style="color: white; font-size: 12px;">속도:</span>
+                    <button class="speed-button active" data-speed="1000">빠름</button>
+                    <button class="speed-button" data-speed="3000">보통</button>
+                    <button class="speed-button" data-speed="5000">느림</button>
+                </div>
+                <span class="image-counter" id="counter">0 / 0</span>
+                <button class="fullscreen-button" id="fullscreenBtn">🖥️ 전체화면</button>
+                <button class="thumbnail-grid-button" id="thumbnailGridBtn">🎞️ 전체썸네일</button>
+                <button class="control-button" id="uploadBtn">📤 파일 업로드</button>
+            </div>
+
+            <div class="thumbnail-section">
+                <button class="thumb-nav-button thumb-prev" id="thumbPrev">‹</button>
+                <div class="thumbnail-container" id="thumbnailContainer"></div>
+                <button class="thumb-nav-button thumb-next" id="thumbNext">›</button>
+            </div>
+        </div>
+
+        <!-- 썸네일 그리드 모달 -->
+        <div class="thumbnail-modal" id="thumbnailModal" tabindex="-1">
+            <div class="modal-header">
+                <div class="modal-title">전체 이미지 (총 <span id="modalCount">0</span>개)</div>
+                <div class="modal-actions">
+                    <button class="modal-download" id="modalDownload" disabled>💾 썸네일 다운로드</button>
+                    <button class="modal-close" id="modalClose">✕ 닫기</button>
+                </div>
+            </div>
+            <div class="thumbnail-grid" id="thumbnailGrid"></div>
+        </div>
+
+
+
+
         <!-- [추가] 애드센스 승인을 위한 텍스트 콘텐츠 영역 -->
         <div class="content-section">
             <div class="content-container">
@@ -833,48 +883,6 @@
 
 
 
-        <div class="main-viewer">
-            <div id="imageWrapper"></div>
-            <button class="nav-button prev-button" id="prevBtn" style="display: none;">‹</button>
-            <button class="nav-button next-button" id="nextBtn" style="display: none;">›</button>
-        </div>
-
-        <div class="zoom-info" id="zoomInfo">100%</div>
-        <div class="control-trigger" id="controlTrigger" style="display: none;"></div>
-
-        <div class="controls-section" style="display: none;" id="controlsSection">
-            <div class="controls">
-                <button class="control-button" id="autoplayBtn">▶ 자동재생</button>
-                <div class="speed-control">
-                    <span style="color: white; font-size: 12px;">속도:</span>
-                    <button class="speed-button active" data-speed="1000">빠름</button>
-                    <button class="speed-button" data-speed="3000">보통</button>
-                    <button class="speed-button" data-speed="5000">느림</button>
-                </div>
-                <span class="image-counter" id="counter">0 / 0</span>
-                <button class="fullscreen-button" id="fullscreenBtn">🖥️ 전체화면</button>
-                <button class="thumbnail-grid-button" id="thumbnailGridBtn">🎞️ 전체썸네일</button>
-                <button class="control-button" id="uploadBtn">📤 파일 업로드</button>
-            </div>
-
-            <div class="thumbnail-section">
-                <button class="thumb-nav-button thumb-prev" id="thumbPrev">‹</button>
-                <div class="thumbnail-container" id="thumbnailContainer"></div>
-                <button class="thumb-nav-button thumb-next" id="thumbNext">›</button>
-            </div>
-        </div>
-
-        <!-- 썸네일 그리드 모달 -->
-        <div class="thumbnail-modal" id="thumbnailModal" tabindex="-1">
-            <div class="modal-header">
-                <div class="modal-title">전체 이미지 (총 <span id="modalCount">0</span>개)</div>
-                <div class="modal-actions">
-                    <button class="modal-download" id="modalDownload" disabled>💾 썸네일 다운로드</button>
-                    <button class="modal-close" id="modalClose">✕ 닫기</button>
-                </div>
-            </div>
-            <div class="thumbnail-grid" id="thumbnailGrid"></div>
-        </div>
     </div>
 
     <script>
