@@ -871,6 +871,54 @@
                 <p><strong>Q. 지원하는 이미지 형식은 무엇인가요?</strong><br>
                 A. JPG, PNG, WEBP, GIF, AVIF, BMP 등 최신 웹 브라우저가 지원하는 모든 이미지 형식을 지원합니다.</p>
 
+
+
+                <!-- [추가] GitHub README 내용 영역 -->
+                <div class="readme-section" style="margin-top: 50px; padding-top: 30px; border-top: 1px dashed #444;">
+                    <h3>📘 프로젝트 상세 정보 (README)</h3>
+                    
+                    <h4>📝 소개 (Introduction)</h4>
+                    <p>
+                        <strong>hgall</strong>은 대용량 이미지 폴더를 웹 브라우저에서 간편하게 열람하고 관리할 수 있는 웹 기반 이미지 뷰어입니다.<br>
+                        사용자의 편의를 최우선으로 고려하여 <strong>드래그 앤 드롭</strong>, <strong>키보드 탐색</strong>, <strong>자동 재생</strong> 등 다양한 기능을 제공합니다.<br>
+                        특히, 서버 업로드 없이 브라우저 자체적으로 파일을 처리하여 속도가 빠르고 보안이 강력합니다.
+                    </p>
+
+                    <h4>✨ 주요 기능 (Features)</h4>
+                    <ul style="list-style-type: disc; color: #ccc;">
+                        <li><strong>📁 폴더 단위 업로드:</strong> 폴더를 드래그하거나 선택하여 내부의 모든 이미지를 한 번에 불러옵니다.</li>
+                        <li><strong>💾 경로 기억 (History):</strong> <code>IndexedDB</code> 및 <code>FileSystem Access API</code>를 활용하여 최근 열었던 폴더 권한을 기억하고, 재방문 시 원클릭으로 다시 엽니다. (Chrome 권장)</li>
+                        <li><strong>⚡ 고성능 썸네일:</strong> 대량의 이미지도 끊김 없이 확인할 수 있도록 비동기 방식으로 썸네일을 생성하고 캐싱합니다.</li>
+                        <li><strong>📦 ZIP 다운로드:</strong> 생성된 썸네일들을 <code>JSZip</code> 라이브러리를 통해 하나의 압축 파일로 다운로드할 수 있습니다.</li>
+                        <li><strong>🎮 편리한 조작:</strong> 화살표 키로 이동, 스페이스바로 슬라이드쇼, 휠로 줌인/줌아웃을 지원합니다.</li>
+                        <li><strong>📱 반응형 디자인:</strong> PC 및 다양한 해상도 환경에 맞춰 UI가 자동으로 최적화됩니다.</li>
+                    </ul>
+
+                    <h4>🛠 기술 스택 (Tech Stack)</h4>
+                    <p>외부 프레임워크 없이 순수 웹 표준 기술로 제작되어 가볍고 빠릅니다.</p>
+                    <ul style="list-style-type: square; color: #ccc;">
+                        <li><strong>Core:</strong> HTML5, CSS3, Vanilla JavaScript (ES6+)</li>
+                        <li><strong>Storage:</strong> IndexedDB (폴더 핸들 저장), LocalStorage (히스토리 텍스트 저장)</li>
+                        <li><strong>API:</strong> File System Access API (폴더 접근 권한 관리)</li>
+                        <li><strong>Library:</strong> JSZip (클라이언트 측 압축 기능)</li>
+                    </ul>
+
+                    <h4>⚠️ 브라우저 호환성</h4>
+                    <p>
+                        본 프로젝트는 최신 웹 표준 기술인 <strong>File System Access API</strong>를 적극 활용합니다.<br>
+                        따라서 <strong>Google Chrome, Microsoft Edge</strong> 등 Chromium 기반 브라우저에서 가장 완벽하게 작동합니다.<br>
+                        (Firefox, Safari 등에서는 일부 기능이 제한적으로 동작하거나 폴더 열기 방식이 다를 수 있습니다.)
+                    </p>
+
+                    <h4>⚖️ 라이선스 (License)</h4>
+                    <p style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 5px; font-size: 0.9em;">
+                        <strong>Copyright (c) 2026 smweb.kr. All Rights Reserved.</strong><br><br>
+                        본 소프트웨어의 소스 코드와 디자인에 대한 저작권은 <strong>smweb.kr</strong> 및 제작자(김인재)에게 있습니다.<br>
+                        저작권자의 명시적인 서면 허가 없이 무단 복제, 수정, 배포, 판매하는 행위를 엄격히 금지합니다.
+                    </p>
+                </div>
+                <!-- // GitHub README 내용 끝 -->                
+
                 <!-- 5. 필수 정책 링크 (애드센스 필수 조건) -->
                 <div class="footer-links">
                     <a href="privacy-policy.html">개인정보처리방침</a> | 
