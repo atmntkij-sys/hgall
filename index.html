@@ -26,7 +26,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지 갤러리 뷰어 (경로 기억 + Chrome 완벽 호환)</title>
+    
+    <!-- SEO: 사이트 제목 및 설명 -->
+    <title>H-GALLERY | 무료 웹 이미지 뷰어 (Web Image Viewer) - No Upload</title>
+    <meta name="description" content="설치 없이 브라우저에서 바로 보는 대용량 이미지 뷰어. 폴더 드래그 앤 드롭, 압축파일 지원, 개인정보 보호(로컬 처리). Fast & Secure Web Image Viewer for Manga, Photos.">
+    <meta name="keywords" content="웹 이미지 뷰어, Web Image Viewer, 만화 뷰어, 사진 뷰어, hgall, Local Image Viewer, 폴더 뷰어, 무료 뷰어">
+    <meta name="author" content="smweb.kr">
+    <meta name="robots" content="index, follow">
+
+    <!-- GEO: 다국어 지원 명시 -->
+    <link rel="alternate" hreflang="ko" href="https://hgall.pages.dev/" />
+    <link rel="alternate" hreflang="en" href="https://hgall.pages.dev/?lang=en" />
+    <link rel="canonical" href="https://hgall.pages.dev/">
+
+    <!-- Social Media (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="H-GALLERY | 초고속 웹 이미지 뷰어">
+    <meta property="og:description" content="서버 전송 없는 100% 로컬 보안 뷰어. 수천 장의 이미지를 1초 만에 불러오세요.">
+    <meta property="og:image" content="https://hgall.pages.dev/og-image.jpg"> <!-- 대표 이미지 경로 (없으면 스크린샷 캡쳐해서 올리세요) -->
+    <meta property="og:url" content="https://hgall.pages.dev/">
+    
+    <!-- 구조화된 데이터 (JSON-LD) : 구글이 '소프트웨어 앱'으로 인식하게 함 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "H-GALLERY",
+      "url": "https://hgall.pages.dev/",
+      "description": "A secure, client-side web image viewer that supports folder uploads and zip downloads.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Drag & Drop, Folder View, Local Processing, Zip Download"
+    }
+    </script>
+    
     <!-- 파이어폭스 ZIP 다운로드를 위한 라이브러리 추가 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <style>
@@ -917,7 +955,7 @@
                         본 소프트웨어의 소스 코드와 디자인에 대한 저작권은 <strong>smweb.kr</strong> 및 제작자(김인재)에게 있습니다.<br>
                         저작권자의 명시적인 서면 허가 없이 무단 복제, 수정, 배포, 판매하는 행위를 엄격히 금지합니다.
                     </p> -->
-                    
+
                 </div>
                 <!-- // GitHub README 내용 끝 -->                
 
