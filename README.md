@@ -21,6 +21,6 @@ If you use Chrome browser to install the "download thumbnail" file for the first
 <br>
 <div align="center">
 
-**[⬇️ index.html 다운로드 받기](https://github.com/atmntkij-sys/hgall/blob/main/index.html)**
+**[⬇️ index.html 다운로드 받기](https://github.com/atmntkij-sys/hgall/blob/main/index copy.html)**
 
 </div>
