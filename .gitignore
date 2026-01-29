@@ -25,5 +25,5 @@ yarn-error.log*
 *.swp
 
 # User-specific files
-index copy.html
+#index copy.html
 w.text
